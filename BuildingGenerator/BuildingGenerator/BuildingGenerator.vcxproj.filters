@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Parser">
+      <UniqueIdentifier>{a087f174-8865-4ef4-aaee-3d982177a5d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderer">
+      <UniqueIdentifier>{2bb0992e-9df2-43ac-b82a-3304cd0daf46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Commons">
+      <UniqueIdentifier>{0f68db30-64bb-4e50-9d48-c7fdf5e87985}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modeler">
+      <UniqueIdentifier>{b2be7123-7c04-46e7-b8cc-866249355a69}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Files\Source.cpp" />
+    <ClCompile Include="Files\Parser\Parser.cpp">
+      <Filter>Parser</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\Renderer\Renderer.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\Commons\Commons.cpp">
+      <Filter>Commons</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\Modeler\Modeler.cpp">
+      <Filter>Modeler</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Files\Parser\Parser.h">
+      <Filter>Parser</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\Renderer\Renderer.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\Modeler\Modeler.h">
+      <Filter>Modeler</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\Commons\Commons.h">
+      <Filter>Commons</Filter>
+    </ClInclude>
+    <ClInclude Include="Files\Source.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Files\ReadMe.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="Files\Rules.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
