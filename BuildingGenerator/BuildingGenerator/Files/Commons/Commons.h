@@ -43,16 +43,22 @@ namespace comn
 	{
 	private:
 		// --- Variables ----------------------
-		std::string functionName;
-		// vector of the function parameters. pair < ValueType , ValueInStringFormat >
-		std::vector<std::pair<std::string, std::string>> functionParameters;
-		double probability;
-
 
 		// --- Methods ------------------------
 
 	public:
-		Rule(){};
+		// --- Variables ----------------------
+		std::string functionName;
+		std::vector<std::string> functionParameters;
+		std::vector<std::string> childNames;
+		double probability;
+
+		// --- Methods ------------------------
+		Rule()
+		{
+			functionName = "";
+			probability = 1;
+		}
 		~Rule(){};
 	};
 }

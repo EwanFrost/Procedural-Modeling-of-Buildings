@@ -10,7 +10,7 @@ namespace modl
 	{
 
 	}
-	void Modeler::Model(std::vector < std::pair < std::string, std::vector<comn::Rule>>> ruleSet)
+	void Modeler::Model(std::unordered_map < std::string, std::vector<comn::Rule>> ruleSet)
 	{
 		// uses the ruleSet to construct the deviation tree
 	}

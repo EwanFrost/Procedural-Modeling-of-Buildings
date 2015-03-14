@@ -4,6 +4,8 @@
 #include "..\Commons\Commons.h"
 #include "..\Source.h"
 #include <vector>
+#include <unordered_map>
+#include <map>
 #include <string>
 
 namespace modl
@@ -19,7 +21,7 @@ namespace modl
 	public:
 		Modeler();
 		~Modeler();
-		void Model(std::vector < std::pair < std::string, std::vector<comn::Rule>>> ruleSet);
+		void Model(std::unordered_map < std::string, std::vector<comn::Rule>> ruleSet);
 		comn::Node GetDeviationTree() { 
 			if (USE_TEST_DATA) 
 				return GenerateTestData(); 

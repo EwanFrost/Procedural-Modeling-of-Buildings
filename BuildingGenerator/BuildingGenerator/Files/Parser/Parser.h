@@ -4,6 +4,7 @@
 #include "..\Commons\Commons.h"
 #include "..\Source.h"
 #include <vector>
+#include <unordered_map>
 #include <string>
 
 namespace pars
@@ -13,15 +14,15 @@ namespace pars
 	private:
 		// --- Variables ----------------------
 		// pair < SymbolID, vector<Node> >
-		std::vector < std::pair < std::string, std::vector<comn::Rule>>> ruleSet;
+		std::unordered_map < std::string, std::vector<comn::Rule>> ruleSet;
 
 		// --- Methods ------------------------
-		std::vector < std::pair < std::string, std::vector<comn::Rule>>> GenerateTestData();
+		std::unordered_map < std::string, std::vector<comn::Rule>> GenerateTestData();
 	public:
 		Parser();
 		~Parser();
 		void Parse();
-		std::vector < std::pair < std::string, std::vector<comn::Rule>>> GetRuleSet() { 
+		std::unordered_map < std::string, std::vector<comn::Rule>> GetRuleSet() {
 			if (USE_TEST_DATA) 
 				return GenerateTestData(); 
 			else 
