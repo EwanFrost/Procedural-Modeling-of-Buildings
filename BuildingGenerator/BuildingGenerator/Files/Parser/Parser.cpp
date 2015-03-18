@@ -85,6 +85,7 @@ namespace pars
 				size_t pos = line.find("->");
 
 				string key = line.substr(0, pos - 1);
+				key = trim(key);
 				string ruleBody = line.substr(pos + 3, string::npos);
 				comn::Rule rule;
 			
