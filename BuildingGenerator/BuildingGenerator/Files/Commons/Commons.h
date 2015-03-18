@@ -3,6 +3,8 @@
 
 #include <string>
 #include <vector>
+#include <map>
+using namespace std;
 
 namespace comn
 {
@@ -16,27 +18,70 @@ namespace comn
 		double z;
 	};
 
-	class Node
+	class Symbol
 	{
 	private:
 		// --- Variables ----------------------		
-
+		std::string SymbolName;
+		Vector3 scale;
+		Vector3 position;
+		bool IsActive;
+		bool IsDrawable;			
+	
 		// --- Methods ------------------------
 
 	public:
 		// --- Variables ----------------------
-		std::string SymbolName;
-		Vector3 Scale;
-		Vector3 Position;
-		bool IsActive;
-		bool IsDrawable;
-		Node* Parent;
-		std::vector<Node> Children;
+		std::vector<Symbol*> Children;
+			
+		// --- Methods ------------------------		
+	
+		void setSymbolName(string name){
+			SymbolName = name;
+		}	
+		string getSymbolName(){
+			return SymbolName;
+		}
+	void setScale(double sx, double sy, double sz){
+		scale.x = sx;
+		scale.y = sy;
+		scale.z = sz;
+	}
 
-		// --- Methods ------------------------
-		Node() : Node("unknown") {};
-		Node(std::string symbolName){ IsActive = true; IsDrawable = true; SymbolName = symbolName; }
-		~Node(){}
+	Vector3 getScale(){
+		return scale;
+	}	
+
+	void setPosition(double sx, double sy, double sz){
+		position.x = sx;
+		position.y = sy;
+		position.z = sz;
+	
+	}
+	
+	Vector3 getPosition(){
+		return position;
+	}
+
+	void setActiveness(bool state){
+		IsActive = state;
+	}
+
+	bool getActiveness(){
+		return IsActive;
+	}
+
+	void setDrawableness(bool state){
+		IsDrawable = state;
+	}
+
+	bool getDrawableness(){
+		return IsDrawable;
+	}
+
+		Symbol() {};
+		Symbol(std::string symbolName){ IsActive = true; IsDrawable = true; SymbolName = symbolName;}
+		~Symbol(){}
 	};
 
 	class Rule
