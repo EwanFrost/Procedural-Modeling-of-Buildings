@@ -33,7 +33,7 @@ namespace modl
 	vector<Symbol*>queue;
 
 	//Symbol* tree;
-	//ofstream cout("C:\\Users\\RaufA\\Desktop\\project pre\\project\\BuildingGenerator\\BuildingGenerator\\Files\\items.txt");
+	
 	void Modeler::init(){	
 				//initialize root of Tree with parameters - name, position, scale
 			
@@ -48,7 +48,7 @@ namespace modl
 		
 				//after building derivation tree, print is being done, by starting from root node and using BFS logic
 
-				/*ofstream cout("C:\\Users\\RaufA\\Desktop\\project pre\\project\\BuildingGenerator\\BuildingGenerator\\Files\\output.txt");				
+				/*ofstream cout("Files\\output.txt");				
 
 				queue.push_back(tree);			
 				
