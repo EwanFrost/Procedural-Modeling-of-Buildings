@@ -53,7 +53,7 @@ namespace rend
 		}
 		return true;
 	}
-	void Renderer::Render(comn::Node tree)
+	void Renderer::Render(comn::Symbol* tree)
 	{
 		if (!isInitialized)
 			return;

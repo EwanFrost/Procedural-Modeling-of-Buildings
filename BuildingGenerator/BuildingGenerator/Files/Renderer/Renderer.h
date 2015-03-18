@@ -99,7 +99,7 @@ namespace rend
 		Renderer();
 		~Renderer();
 		bool IsInitialized() { return isInitialized; }
-		void Render(comn::Node tree);
+		void Render(comn::Symbol* tree);
 		
 	};
 }
