@@ -5,6 +5,7 @@
 #include "..\Source.h"
 #include<GL\glew.h>
 #include<GL\freeglut.h>
+#include<GLFW\glfw3.h>
 #include<iostream>
 #include <vector>
 #include <string>
@@ -15,7 +16,8 @@ namespace rend
 	{
 	private:
 		// --- Variables ----------------------
-		bool GlewErrorOccoured;
+		GLFWwindow* window;
+		bool isInitialized;
 
 		// --- Methods ------------------------
 
@@ -91,9 +93,12 @@ namespace rend
 			//Makes 3D drawing work when something is in front of something else
 			glEnable(GL_DEPTH_TEST);
 		}
+		void Update();
+		bool Initialize();
 	public:
-		Renderer(int argc, char** argv);
+		Renderer();
 		~Renderer();
+		bool IsInitialized() { return isInitialized; }
 		void Render(comn::Node tree);
 		
 	};
