@@ -73,7 +73,7 @@ namespace pars
 		// parse the Rules.txt and fill the variable ruleSet
 
 		string line;
-		ifstream rulesFile("../BuildingGenerator/Files/Rules.txt");
+		ifstream rulesFile("C:\\Users\\Alexa\\Documents\\GitHub\\project\\BuildingGenerator\\BuildingGenerator\\Files\\Rules.txt");
 
 		if (rulesFile.is_open())
 		{
@@ -85,6 +85,7 @@ namespace pars
 				size_t pos = line.find("->");
 
 				string key = line.substr(0, pos - 1);
+				key = trim(key);
 				string ruleBody = line.substr(pos + 3, string::npos);
 				comn::Rule rule;
 			
