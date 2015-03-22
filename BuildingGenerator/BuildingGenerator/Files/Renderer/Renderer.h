@@ -28,35 +28,17 @@ namespace rend
 		// --- Variables ----------------------------------------
 		GLFWwindow* window;
 		std::pair<int, int> Resolution;
-		bool IsLastStageRendered = false;
+		bool IsLastStageRendered, IsInitializing;
 		vector<comn::Symbol*> RenderingSymbols;
-		bool IsInitializing = true;
 
 		// ------------------ MATRIX & NAVIGATION VARS -----------
-		glm::mat4
-			// Projection matrix : 45° Field of View, 4:3 ratio, display range : 0.1 unit <-> 100 units
-			ProjectionMatrix = glm::perspective(45.0f, 4.0f / 3.0f, 0.1f, 100.0f),
-			// Camera matrix
-			ViewMatrix = glm::lookAt(
-			glm::vec3(4,3,3), // Camera is at (4,3,3), in World Space
-			glm::vec3(0, 0, 0), // and looks at the origin
-			glm::vec3(0, 1, 0)  // Head is up (set to 0,-1,0 to look upside-down)
-			),
-			// Model matrix : an identity matrix (model will be at the origin)
-			ModelMatrix = glm::mat4(1.0f),
-			// Our ModelViewProjection : multiplication of our 3 matrices
-			MVP = ProjectionMatrix * ViewMatrix * ModelMatrix;
-
-		// Initial position : on +Z
-		glm::vec3 position = glm::vec3(-20, 8, -10);
-		// Initial horizontal angle : toward -Z
-		float horizontalAngle = 3.14f / 3;
-		// Initial vertical angle : none
-		float verticalAngle = 0.0f;
-		// Initial Field of View
-		float initialFoV = 45.0f;
-		float speed = 3.0f; // 3 units / second
-		float mouseSpeed = 0.005f;
+		glm::mat4 ProjectionMatrix, ViewMatrix, ModelMatrix, MVP;
+		glm::vec3 position;
+		float horizontalAngle;
+		float verticalAngle;
+		float initialFoV;
+		float speed;
+		float mouseSpeed;
 
 		// --- Methods --------------------------------------------
 		GLuint LoadShaders(const char * vertex_file_path, const char * fragment_file_path);

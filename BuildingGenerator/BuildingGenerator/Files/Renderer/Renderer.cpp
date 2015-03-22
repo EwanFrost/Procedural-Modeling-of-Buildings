@@ -18,11 +18,36 @@ namespace rend
 		}
 	}
 
-	Renderer::Renderer() 
-	{		
+	Renderer::Renderer()
+	{
 		Resolution.first = 1024;
 		Resolution.second = 768;
-		//isInitialized = Initialize();
+		IsLastStageRendered = false;
+		IsInitializing = true;
+
+		// Projection matrix : 45° Field of View, 4:3 ratio, display range : 0.1 unit <-> 100 units
+		ProjectionMatrix = glm::perspective(45.0f, 4.0f / 3.0f, 0.1f, 100.0f),
+		// Camera matrix
+		ViewMatrix = glm::lookAt(
+		glm::vec3(4, 3, 3), // Camera is at (4,3,3), in World Space
+		glm::vec3(0, 0, 0), // and looks at the origin
+		glm::vec3(0, 1, 0)  // Head is up (set to 0,-1,0 to look upside-down)
+		),
+		// Model matrix : an identity matrix (model will be at the origin)
+		ModelMatrix = glm::mat4(1.0f),
+		// Our ModelViewProjection : multiplication of our 3 matrices
+		MVP = ProjectionMatrix * ViewMatrix * ModelMatrix;
+
+		// Initial position : on +Z
+		position = glm::vec3(-20, 8, -10);
+		// Initial horizontal angle : toward -Z
+		horizontalAngle = 3.14f / 3;
+		// Initial vertical angle : none
+		verticalAngle = 0.0f;
+		// Initial Field of View
+		initialFoV = 45.0f;
+		speed = 3.0f; // 3 units / second
+		mouseSpeed = 0.005f;
 	}
 	Renderer::~Renderer(){}
 	void Renderer::PosAndScaleToVerteces(comn::Vector3 pos, comn::Vector3 scale, std::vector<GLfloat>& verteces, bool x, bool y, bool z)
