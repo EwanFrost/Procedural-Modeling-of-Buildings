@@ -24,7 +24,8 @@ namespace comn
 	private:
 		// --- Variables ----------------------		
 		std::string SymbolName;
-		std::string Texture = "";
+		std::string Texture = ""; 
+		float Opacity = 1.0f;
 		Vector3 scale;
 		Vector3 position;
 		bool IsActive;

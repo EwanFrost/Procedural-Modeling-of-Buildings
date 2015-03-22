@@ -38,8 +38,6 @@ fwindow -> window
 lwindow -> window
 rwindow -> window
 
-window -> S(2,4,0.5):0.6
-window -> S(2,2,0.5):0.4
 fwall -> wall
 lwall -> wall
 rwall -> wall
@@ -48,9 +46,6 @@ entrance -> subDiv("X",0.5,2,0.5){wall|door_area|wall}
 door_area -> subDiv("Y",5,1){door|wall} :0.6
 door_area -> subDiv("Y",3,1){door|wall} :0.4
 
-
-door -> S(5,2,0.5):0.6
-door -> S(3,2,0.5):0.4
 
 
       
