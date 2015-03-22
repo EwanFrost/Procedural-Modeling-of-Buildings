@@ -73,7 +73,7 @@ namespace pars
 		// parse the Rules.txt and fill the variable ruleSet
 
 		string line;
-		ifstream rulesFile("Files\\Rules.txt");
+		ifstream rulesFile("..\\BuildingGenerator\\Files\\Rules.txt");
 
 		if (rulesFile.is_open())
 		{
@@ -152,8 +152,8 @@ namespace pars
 			cout << "Unable to open Rules.txt\n"; 
 		}
 
-		printMap(ruleSet);
-		system("pause");
+		//printMap(ruleSet);
+		//system("pause");
 	}
 
 	std::unordered_map < std::string, std::vector<comn::Rule>> Parser::GenerateTestData()
