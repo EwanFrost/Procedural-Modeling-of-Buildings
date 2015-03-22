@@ -33,16 +33,15 @@ Enter the Properties of the Project BuildingGenerator
 1. C/C++  -> General -> Additional Include Directories
 	@ add ..\project\libs\glew-1.12.0\include
 	@ add ..\project\libs\freeglut\include
-<<<<<<< HEAD
 	@ add ..\project\libs\glfw-3.1.bin.WIN32\include
 	@ add ..\project\libs\glm\
-=======
->>>>>>> 0bccdc6449e680e5c82b40141274fcec35ca960f
 
 1. Linker -> General -> Additional Library Directories
 	@ add ..\project\libs\glew-1.12.0\lib\Release\Win32
 	@ add ..\project\libs\freeglut\lib
+	@ add ..\project\libs\glfw-3.1.bin.WIN32\lib-vc2013
 
 3. Linker -> Input -> Additional Dependencies
 	@ add glew32.lib
 	@ add freeglut.lib
+	@ add glfw3.lib

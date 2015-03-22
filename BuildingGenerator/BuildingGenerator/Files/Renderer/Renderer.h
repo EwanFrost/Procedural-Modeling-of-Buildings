@@ -3,7 +3,6 @@
 
 #include "..\Commons\Commons.h"
 #include "..\Source.h"
-<<<<<<< HEAD
 #include <GL\glew.h>
 #include <GL\freeglut.h>
 #include <GLFW\glfw3.h>
@@ -13,11 +12,6 @@
 #include <matrix_transform.hpp> //translate, rotate, scale, perspective 
 #include <type_ptr.hpp> //value_ptr
 #include <iostream>
-=======
-#include<GL\glew.h>
-#include<GL\freeglut.h>
-#include<iostream>
->>>>>>> 0bccdc6449e680e5c82b40141274fcec35ca960f
 #include <vector>
 #include <string>
 
@@ -31,7 +25,6 @@ namespace rend
 	class Renderer
 	{
 	private:
-<<<<<<< HEAD
 		// --- Variables ----------------------------------------
 		GLFWwindow* window;
 		std::pair<int, int> Resolution;
@@ -72,10 +65,6 @@ namespace rend
 		}
 		GLuint LoadShaders(const char * vertex_file_path, const char * fragment_file_path);
 		GLuint loadBMP_custom(const char * imagepath){
-=======
-		// --- Variables ----------------------
-		bool GlewErrorOccoured;
->>>>>>> 0bccdc6449e680e5c82b40141274fcec35ca960f
 
 			//printf("Reading image %s\n", imagepath);
 
@@ -243,27 +232,14 @@ namespace rend
 
 			return textureID;
 		}
-<<<<<<< HEAD
 		void static PosAndScaleToVerteces(comn::Symbol* obj, std::vector<GLfloat>& verteces);
 		void static PosAndScaleToVerteces(comn::Vector3 pos, comn::Vector3 scale, std::vector<GLfloat>& verteces, bool x, bool y, bool z);
 		void ComputeMatricesFromInputs();			
 
-=======
-		//Initializes 3D rendering
-		void static _initRendering() {
-			//Makes 3D drawing work when something is in front of something else
-			glEnable(GL_DEPTH_TEST);
-		}
->>>>>>> 0bccdc6449e680e5c82b40141274fcec35ca960f
 	public:
-		Renderer(int argc, char** argv);
+		Renderer();
 		~Renderer();
-<<<<<<< HEAD
 		bool Render(comn::Symbol* tree);
-=======
-		void Render(comn::Node tree);
-		
->>>>>>> 0bccdc6449e680e5c82b40141274fcec35ca960f
 	};
 }
 

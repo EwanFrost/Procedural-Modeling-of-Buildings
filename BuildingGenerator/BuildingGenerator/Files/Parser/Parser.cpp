@@ -73,11 +73,7 @@ namespace pars
 		// parse the Rules.txt and fill the variable ruleSet
 
 		string line;
-<<<<<<< HEAD
 		ifstream rulesFile("..\\BuildingGenerator\\Files\\Rules.txt");
-=======
-		ifstream rulesFile("C:\\Users\\Alexa\\Documents\\GitHub\\project\\BuildingGenerator\\BuildingGenerator\\Files\\Rules.txt");
->>>>>>> 0bccdc6449e680e5c82b40141274fcec35ca960f
 
 		if (rulesFile.is_open())
 		{

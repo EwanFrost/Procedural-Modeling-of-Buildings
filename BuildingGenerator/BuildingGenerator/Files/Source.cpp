@@ -6,7 +6,7 @@ int main(int argc, char** argv)
 {
 	pars::Parser parser;
 	modl::Modeler modeler;
-	rend::Renderer renderer(argc, argv);
+	rend::Renderer renderer;
 
 	parser.Parse();
 	modeler.Model(parser.GetRuleSet());

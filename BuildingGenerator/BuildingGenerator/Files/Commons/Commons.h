@@ -3,6 +3,8 @@
 
 #include <string>
 #include <vector>
+#include <map>
+using namespace std;
 
 namespace comn
 {
@@ -17,11 +19,10 @@ namespace comn
 		float z;
 	};
 
-	class Node
+	class Symbol
 	{
 	private:
 		// --- Variables ----------------------		
-<<<<<<< HEAD
 		std::string SymbolName;
 		std::string Texture = "";
 		Vector3 scale;
@@ -29,14 +30,10 @@ namespace comn
 		bool IsActive;
 		bool IsDrawable;			
 	
-=======
-
->>>>>>> 0bccdc6449e680e5c82b40141274fcec35ca960f
 		// --- Methods ------------------------
 
 	public:
 		// --- Variables ----------------------
-<<<<<<< HEAD
 		std::vector<Symbol*> Children;
 			
 		// --- Methods ------------------------		
@@ -79,20 +76,6 @@ namespace comn
 		Symbol() {};
 		Symbol(std::string symbolName){ IsActive = true; IsDrawable = true; SymbolName = symbolName;}
 		~Symbol(){}
-=======
-		std::string SymbolName;
-		Vector3 Scale;
-		Vector3 Position;
-		bool IsActive;
-		bool IsDrawable;
-		Node* Parent;
-		std::vector<Node> Children;
-
-		// --- Methods ------------------------
-		Node() : Node("unknown") {};
-		Node(std::string symbolName){ IsActive = true; IsDrawable = true; SymbolName = symbolName; }
-		~Node(){}
->>>>>>> 0bccdc6449e680e5c82b40141274fcec35ca960f
 	};
 
 	class Rule
