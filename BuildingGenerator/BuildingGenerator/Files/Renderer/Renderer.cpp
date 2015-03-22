@@ -245,14 +245,13 @@ namespace rend
 		// Open a window and create its OpenGL context
 		window = glfwCreateWindow(Resolution.first, Resolution.second, "Building Generator", NULL, NULL);
 		if (window == NULL){
-			fprintf(stderr, "Failed to open GLFW window. If you have an Intel GPU, they are not 3.3 compatible. Try the 2.1 version of the tutorials.\n");
+			fprintf(stderr, "Failed to open GLFW window. If you have an Intel GPU, they are not 3.3 compatible.\n");
 			glfwTerminate();
 			return -1;
 		}
 		glfwMakeContextCurrent(window);
 
 		// --------------INITIALIZE GLEW ------------------------------------------------------
-		// Initialize GLEW
 		glewExperimental = true; // Needed for core profile
 		if (glewInit() != GLEW_OK) {
 			fprintf(stderr, "Failed to initialize GLEW\n");
@@ -269,7 +268,6 @@ namespace rend
 		fprintf(stderr, "		T     - swap textures.\n");
 
 		// --------------INITIALIZE OTHER SETTINGS --------------------------------------------
-		// Ensure we can capture the escape key being pressed below
 		glfwSetInputMode(window, GLFW_STICKY_KEYS, GL_TRUE);
 		glfwSetMouseButtonCallback(window, mouse_button_callback);
 		// Dark blue background
@@ -285,6 +283,7 @@ namespace rend
 		vector<GLfloat> g_vertex_buffer_data;
 		vector<comn::Symbol*>queue;
 		queue.push_back(tree);
+		double lastTime = glfwGetTime();
 
 		do
 		{
@@ -297,18 +296,16 @@ namespace rend
 			GLuint MatrixID = glGetUniformLocation(programID, "MVP");
 			// Load the texture using any two methods
 			GLuint Texture = loadBMP_custom("../BuildingGenerator/Files/Resources/uvtemplate.bmp");
-			// GLuint Texture = loadDDS("../BuildingGenerator/Files/Resources/uvtemplate.DDS");
 			// Get a handle for our "myTextureSampler" uniform
 			GLuint TextureID = glGetUniformLocation(programID, "myTextureSampler");
 
 			// --------------TREE PARSING ------------------------------------------------------
-			// uses the Tree to render the objects on the display
 			if (IsInitializing || glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS)
 			{
 				IsInitializing = false;
-				IsLastStageRendered = queue.size() == 0;
 				if (!IsLastStageRendered)
 				{
+					IsLastStageRendered = true;
 					RenderingSymbols.clear();
 					vector<comn::Symbol*> newqueue;
 
@@ -318,6 +315,7 @@ namespace rend
 						RenderingSymbols.push_back(queue[i]);
 						if (queue[i]->Children.size() > 0)
 						{
+							IsLastStageRendered = false;
 							for (int j = 0; j < queue[i]->Children.size(); j++)
 								newqueue.push_back(queue[i]->Children[j]);
 						}
@@ -387,7 +385,7 @@ namespace rend
 					);
 
 				// --------------DRAW TRIANGLES ---------------------------------------------------
-				glDrawArrays(GL_TRIANGLES, 0, g_vertex_buffer_data.size() / 5); // 12*3 indices starting at 0 -> 12 triangles
+				glDrawArrays(GL_TRIANGLES, 0, g_vertex_buffer_data.size() / 5);
 
 				glDisableVertexAttribArray(0);
 				glDisableVertexAttribArray(1);
@@ -396,11 +394,17 @@ namespace rend
 				glfwSwapBuffers(window);
 				glfwPollEvents();
 
-				if (glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS && !IsLastStageRendered)
-					break;
+				double currentTime = glfwGetTime();
+				if (float(currentTime - lastTime) > 0.2f)
+				{
+					lastTime = currentTime;
 
-				if (glfwGetKey(window, GLFW_KEY_T) == GLFW_PRESS)
-					break;
+					if (glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS && !IsLastStageRendered)
+						break;
+
+					if (glfwGetKey(window, GLFW_KEY_T) == GLFW_PRESS)
+						break;
+				}
 
 			} // Check if the ESC key was pressed or the window was closed
 			while ((glfwGetKey(window, GLFW_KEY_ESCAPE) != GLFW_PRESS &&
@@ -411,7 +415,6 @@ namespace rend
 			glDeleteTextures(1, &TextureID);
 			glDeleteVertexArrays(1, &VertexArrayID);
 			
-			Sleep(400);
 		} while (glfwGetKey(window, GLFW_KEY_ESCAPE) != GLFW_PRESS &&
 			glfwWindowShouldClose(window) == 0);
 
