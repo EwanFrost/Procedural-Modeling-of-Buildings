@@ -78,13 +78,22 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+<<<<<<< HEAD
       <AdditionalIncludeDirectories>D:\project\libs\glew-1.9.0\include;D:\project\libs\freeglut\include;D:\project\libs\glfw-3.1.bin.WIN32\include;D:\project\libs\glm\;D:\project\libs\glm\detail;D:\project\libs\glm\gtc;D:\project\libs\glm\gtx;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+=======
+      <AdditionalIncludeDirectories>D:\project\libs\glew-1.12.0\include;D:\project\libs\freeglut\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+>>>>>>> 0bccdc6449e680e5c82b40141274fcec35ca960f
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+<<<<<<< HEAD
       <AdditionalLibraryDirectories>D:\project\libs\glew-1.9.0\lib;D:\project\libs\freeglut\lib;D:\project\libs\glfw-3.1.bin.WIN32\lib-vc2013;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>glew32.lib;freeglut.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+=======
+      <AdditionalLibraryDirectories>D:\project\libs\glew-1.12.0\lib\Release\Win32;D:\project\libs\freeglut\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glew32.lib;freeglut.lib;%(AdditionalDependencies)</AdditionalDependencies>
+>>>>>>> 0bccdc6449e680e5c82b40141274fcec35ca960f
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -97,15 +106,24 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions);_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+<<<<<<< HEAD
       <AdditionalIncludeDirectories>D:\project\libs\glew-1.9.0\include;D:\project\libs\freeglut\include;D:\project\libs\glfw-3.1.bin.WIN32\include;D:\project\libs\glm\;D:\project\libs\glm\detail;D:\project\libs\glm\gtc;D:\project\libs\glm\gtx;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+=======
+      <AdditionalIncludeDirectories>D:\project\libs\glew-1.12.0\include;D:\project\libs\freeglut\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+>>>>>>> 0bccdc6449e680e5c82b40141274fcec35ca960f
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+<<<<<<< HEAD
       <AdditionalLibraryDirectories>D:\project\libs\glew-1.9.0\lib;D:\project\libs\freeglut\lib;D:\project\libs\glfw-3.1.bin.WIN32\lib-vc2013;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>glew32.lib;freeglut.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+=======
+      <AdditionalLibraryDirectories>D:\project\libs\glew-1.12.0\lib\Release\Win32;D:\project\libs\freeglut\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glew32.lib;freeglut.lib;%(AdditionalDependencies)</AdditionalDependencies>
+>>>>>>> 0bccdc6449e680e5c82b40141274fcec35ca960f
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
