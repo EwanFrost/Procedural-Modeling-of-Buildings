@@ -34,6 +34,7 @@ Enter the Properties of the Project BuildingGenerator
 	@ add ..\project\libs\glew-1.12.0\include
 	@ add ..\project\libs\freeglut\include
 	@ add ..\project\libs\glfw-3.1.bin.WIN32\include
+	@ add ..\project\libs\glm\
 
 1. Linker -> General -> Additional Library Directories
 	@ add ..\project\libs\glew-1.12.0\lib\Release\Win32
