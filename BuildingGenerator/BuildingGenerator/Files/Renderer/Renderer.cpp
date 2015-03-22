@@ -295,7 +295,7 @@ namespace rend
 			// Get a handle for our "MVP" uniform
 			GLuint MatrixID = glGetUniformLocation(programID, "MVP");
 			// Load the texture using any two methods
-			GLuint Texture = loadBMP_custom("../BuildingGenerator/Files/Resources/uvtemplate.bmp");
+			GLuint Texture = loadBMP_custom("../BuildingGenerator/Files/Resources/no_texture.bmp");
 			// Get a handle for our "myTextureSampler" uniform
 			GLuint TextureID = glGetUniformLocation(programID, "myTextureSampler");
 
