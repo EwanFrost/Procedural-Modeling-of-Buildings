@@ -46,54 +46,88 @@ namespace rend
 		verticalAngle = 0.0f;
 		// Initial Field of View
 		initialFoV = 45.0f;
-		speed = 3.0f; // 3 units / second
+		speed = 8.0f; // 3 units / second
 		mouseSpeed = 0.005f;
+
+		Textures["no_texture"] = 0;
 	}
 	Renderer::~Renderer(){}
-	void Renderer::PosAndScaleToVerteces(comn::Vector3 pos, comn::Vector3 scale, std::vector<GLfloat>& verteces, bool x, bool y, bool z)
+	void Renderer::PosAndScaleToVerteces(comn::Vector3 pos, comn::Vector3 scale, std::vector<GLfloat>& verteces, bool x, bool y, bool z, float index)
 	{
-		std::vector<GLfloat> g_vertex_buffer_data = {
+		GLfloat g_vertex_buffer_data[3*3*6] = {
 			pos.x, pos.y, pos.z,
-			0.0f, 0.0f,
+			0.0f, 0.0f, index,
 			pos.x + scale.x*(x&y || x&z), pos.y + scale.y*(y&z), pos.z,
-			1.0f * (x&y || x&z), 1.0f * (y&z),
+			1.0f * (x&y || x&z), 1.0f * (y&z), index,
 			pos.x + scale.x*x, pos.y + scale.y*y, pos.z + scale.z*z,
-			1.0f, 1.0f,
+			1.0f, 1.0f, index,
 
 			pos.x, pos.y, pos.z,
-			0.0f, 0.0f,
+			0.0f, 0.0f, index,
 			pos.x, pos.y + scale.y*(x&y), pos.z + scale.z*(x&z || y&z),
-			1.0f*(x&y), 1.0f*(x&z || y&z),
+			1.0f*(x&z || y&z), 1.0f*(x&y), index,
 			pos.x + scale.x*x, pos.y + scale.y*y, pos.z + scale.z*z,
-			1.0f, 1.0f,
+			1.0f, 1.0f, index,
 		};		
 
-		for (size_t i = 0; i < g_vertex_buffer_data.size(); i++)
+		for (size_t i = 0; i < 3 * 3 * 6; i++)
 			verteces.push_back(g_vertex_buffer_data[i]);
 	}
-	void Renderer::PosAndScaleToVerteces(comn::Symbol* obj, std::vector<GLfloat>& verteces)
+	void Renderer::PosAndScaleToVerteces(comn::Symbol* obj, std::vector<GLfloat>& verteces, std::vector<GLuint>& texturesID)
 	{
+		std::string Texture = obj->getTexture();
+		float index = 0.0f;
+		if (Texture == "window")
+			index = 1.0f;
+		else if (Texture == "door")
+			index = 2.0f;
+		else if (Texture == "wall")
+			index = 3.0f;
+
+		texturesID.push_back((int)index);
+
 		if (obj->getScale().x > 0 && obj->getScale().y > 0 && obj->getScale().z > 0)
 		{
 			comn::Vector3 pos = obj->getPosition();
 
-			PosAndScaleToVerteces(obj->getPosition(), obj->getScale(), verteces, true, true, false);
-			PosAndScaleToVerteces(obj->getPosition(), obj->getScale(), verteces, true, false, true);
-			PosAndScaleToVerteces(obj->getPosition(), obj->getScale(), verteces, false, true, true);
+			PosAndScaleToVerteces(obj->getPosition(), obj->getScale(), verteces, true, true, false, index);
+			PosAndScaleToVerteces(obj->getPosition(), obj->getScale(), verteces, true, false, true, index);
+			PosAndScaleToVerteces(obj->getPosition(), obj->getScale(), verteces, false, true, true, index);
 
 			comn::Vector3 posX(obj->getPosition()), posY(obj->getPosition()), posZ(obj->getPosition());
 			posX.x += obj->getScale().x;
 			posY.y += obj->getScale().y;
 			posZ.z += obj->getScale().z;
-			PosAndScaleToVerteces(posX, obj->getScale(), verteces, false, true, true);
-			PosAndScaleToVerteces(posY, obj->getScale(), verteces, true, false, true);
-			PosAndScaleToVerteces(posZ, obj->getScale(), verteces, true, true, false);
+			PosAndScaleToVerteces(posX, obj->getScale(), verteces, false, true, true, index);
+			PosAndScaleToVerteces(posY, obj->getScale(), verteces, true, false, true, index);
+			PosAndScaleToVerteces(posZ, obj->getScale(), verteces, true, true, false, index);
 		}
 		else
 		{
 			PosAndScaleToVerteces(obj->getPosition(), obj->getScale(), verteces, 
-				obj->getScale().x > 0, obj->getScale().y > 0, obj->getScale().z > 0);
+				obj->getScale().x > 0, obj->getScale().y > 0, obj->getScale().z > 0, index);
 		}
+	}
+	void Renderer::ParseTreeForTextures(comn::Symbol* tree)
+	{
+		Textures["window"] = 1;
+		Textures["door"] = 2;
+		Textures["wall"] = 3;
+		/*std::vector<comn::Symbol*> queue;
+		queue.push_back(tree);
+
+		while (queue.size()){
+			comn::Symbol* cur_item = queue[0];
+			queue.erase(queue.begin());
+			map<std::string, int>::iterator it = Textures.find(cur_item->getTexture());
+			if (it == Textures.end())
+				Textures[cur_item->getTexture()] == Textures.size();
+
+			for (int i = 0; i < cur_item->Children.size(); i++){
+				comn::Symbol *child = cur_item->Children[i];
+				queue.push_back(child);
+			}
+		}*/
 	}
 	void Renderer::ComputeMatricesFromInputs(){
 
@@ -177,6 +211,34 @@ namespace rend
 		lastTime = currentTime;
 
 		MVP = ProjectionMatrix * ViewMatrix * ModelMatrix;
+	}
+	void Renderer::ActivateTextures(int index)
+	{
+		switch (index)
+		{
+		case 0:glActiveTexture(GL_TEXTURE0);break;
+		case 1:glActiveTexture(GL_TEXTURE1); break;
+		case 2:glActiveTexture(GL_TEXTURE2); break;
+		case 3:glActiveTexture(GL_TEXTURE3); break;
+		case 4:glActiveTexture(GL_TEXTURE4); break;
+		case 5:glActiveTexture(GL_TEXTURE5); break;
+		case 6:glActiveTexture(GL_TEXTURE6); break;
+		case 7:glActiveTexture(GL_TEXTURE7); break;
+		case 8:glActiveTexture(GL_TEXTURE8); break;
+		case 9:glActiveTexture(GL_TEXTURE9); break;
+		default:glActiveTexture(GL_TEXTURE0); break;
+		}
+	}
+	void Renderer::SetTextures(std::map<int, GLuint>& TextureBMP, std::map<int, GLuint>& TextureID)
+	{		
+		for (int i = 0; i < TextureID.size(); i++)
+		{
+			// Bind our texture in Texture Unit i
+			ActivateTextures(i);
+			glBindTexture(GL_TEXTURE_2D, TextureBMP[i]);
+			// Set our "TextureSampler" sampler to user Texture Unit i
+			glUniform1i(TextureID[i], i);
+		}		
 	}
 	GLuint Renderer::LoadShaders(const char * vertex_file_path, const char * fragment_file_path)
 	{
@@ -301,14 +363,21 @@ namespace rend
 		glEnable(GL_DEPTH_TEST);
 		// Accept fragment if it closer to the camera than the former one
 		glDepthFunc(GL_LESS);
+		// Parse all elements to find all the neccessary textures
+		ParseTreeForTextures(tree);
 		// Create and compile our GLSL program from the shaders
 		GLuint programID = LoadShaders("../BuildingGenerator/Files/Renderer/VertexShader.vertexshader",
-			"../BuildingGenerator/Files/Renderer/FragmentShader.fragmentshader");			
+			"../BuildingGenerator/Files/Renderer/FragmentShader.fragmentshader");
+			
 	
 		vector<GLfloat> g_vertex_buffer_data;
+		vector<GLuint> g_vertex_texture_buffer_data;
 		vector<comn::Symbol*>queue;
 		queue.push_back(tree);
 		double lastTime = glfwGetTime();
+		std::map<int, GLuint> TextureBMP;
+		std::map<int, GLuint> TextureID;
+		int index = -1;
 
 		do
 		{
@@ -319,10 +388,27 @@ namespace rend
 
 			// Get a handle for our "MVP" uniform
 			GLuint MatrixID = glGetUniformLocation(programID, "MVP");
-			// Load the texture using any two methods
-			GLuint Texture = loadBMP_custom("../BuildingGenerator/Files/Resources/no_texture.bmp");
-			// Get a handle for our "myTextureSampler" uniform
-			GLuint TextureID = glGetUniformLocation(programID, "myTextureSampler");
+
+			if (IsInitializing || glfwGetKey(window, GLFW_KEY_T) == GLFW_PRESS)
+			{
+				index++;
+				// Load the texture using any two methods
+				std::map<std::string, int>::iterator iter;
+				for (iter = Textures.begin(); iter != Textures.end(); ++iter)
+				{
+					// WARNING! improper filePath, texture naming will cause errors !!!
+					std::string TextureMix = (index % 2 == 0 ? "1" : "2");
+					std::string FilePath = "../BuildingGenerator/Files/Resources/TextureMix" + TextureMix + "/" + iter->first + ".bmp";
+					TextureBMP[iter->second] = loadBMP_custom(FilePath.c_str());
+
+					std::string TextureSmapler = "TextureSampler" + std::to_string(iter->second);
+					TextureID[iter->second] = glGetUniformLocation(programID, TextureSmapler.c_str());
+
+					//GLuint Texture = loadBMP_custom("../BuildingGenerator/Files/Resources/no_texture.bmp");
+					// Get a handle for our "myTextureSampler" uniform
+					//GLuint TextureID = glGetUniformLocation(programID, "myTextureSampler");
+				}
+			}
 
 			// --------------TREE PARSING ------------------------------------------------------
 			if (IsInitializing || glfwGetKey(window, GLFW_KEY_SPACE) == GLFW_PRESS)
@@ -355,7 +441,7 @@ namespace rend
 			// --------------CREATING THE ACTUAL VERTECES & TEXTURE MAPPING ---------------------
 			g_vertex_buffer_data.clear();
 			for (size_t i = 0; i < RenderingSymbols.size(); i++)
-				PosAndScaleToVerteces(RenderingSymbols[i], g_vertex_buffer_data);
+				PosAndScaleToVerteces(RenderingSymbols[i], g_vertex_buffer_data, g_vertex_texture_buffer_data);
 
 			GLuint vertexbuffer;
 			glGenBuffers(1, &vertexbuffer);
@@ -378,11 +464,7 @@ namespace rend
 				glUniformMatrix4fv(MatrixID, 1, GL_FALSE, &MVP[0][0]);
 
 				// --------------------------------------------------------------------------------
-				// Bind our texture in Texture Unit 0
-				glActiveTexture(GL_TEXTURE0);
-				glBindTexture(GL_TEXTURE_2D, Texture);
-				// Set our "myTextureSampler" sampler to user Texture Unit 0
-				glUniform1i(TextureID, 0);
+				SetTextures(TextureBMP, TextureID);
 
 				// --------------------------------------------------------------------------------
 				// 1rst attribute buffer : vertices
@@ -393,7 +475,7 @@ namespace rend
 					3,                  // size
 					GL_FLOAT,           // type
 					GL_FALSE,           // normalized?
-					sizeof(float) * 5,  // stride
+					sizeof(float) * 6,  // stride
 					(void*)0            // array buffer offset
 					);
 
@@ -401,16 +483,16 @@ namespace rend
 				glEnableVertexAttribArray(1);
 				glBindBuffer(GL_ARRAY_BUFFER, vertexbuffer);
 				glVertexAttribPointer(
-					1,                                // attribute. No particular reason for 1, but must match the layout in the shader.
-					2,                                // size : U+V => 2
+					1,                                // attribute.
+					3,                                // size : U+V + textureIndex => 3
 					GL_FLOAT,                         // type
 					GL_FALSE,                         // normalized?
-					sizeof(float) * 5,                // stride
+					sizeof(float) * 6,                // stride
 					(char*)(sizeof(float) * 3)        // array buffer offset
 					);
 
 				// --------------DRAW TRIANGLES ---------------------------------------------------
-				glDrawArrays(GL_TRIANGLES, 0, g_vertex_buffer_data.size() / 5);
+				glDrawArrays(GL_TRIANGLES, 0, g_vertex_buffer_data.size() / 6);
 
 				glDisableVertexAttribArray(0);
 				glDisableVertexAttribArray(1);
@@ -436,8 +518,11 @@ namespace rend
 			glfwWindowShouldClose(window) == 0) );
 
 			// -------------- CLEANUP VBO & SHADER ------------------------------------------------
-			glDeleteBuffers(1, &vertexbuffer);		
-			glDeleteTextures(1, &TextureID);
+			glDeleteBuffers(1, &vertexbuffer);	
+			for (size_t i = 0; i < TextureID.size(); i++)
+			{
+				glDeleteTextures(1, &TextureID[i]);
+			}			
 			glDeleteVertexArrays(1, &VertexArrayID);
 			
 		} while (glfwGetKey(window, GLFW_KEY_ESCAPE) != GLFW_PRESS &&

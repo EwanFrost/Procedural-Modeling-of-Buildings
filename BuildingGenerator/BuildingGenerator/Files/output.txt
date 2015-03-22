@@ -1,0 +1,1516 @@
+------------------------------------------------
+Symbol Name: start
+Position: (0, 0, 0)
+Scale: (1, 1, 1)
+Children: { lot }
+------------------------------------------------
+Symbol Name: lot
+Position: (0, 0, 0)
+Scale: (12, 12, 12)
+Children: { top left_facade front right_facade back bottom }
+------------------------------------------------
+Symbol Name: top
+Position: (0, 12, 0)
+Scale: (12, 0, 12)
+Children: { }
+------------------------------------------------
+Symbol Name: left_facade
+Position: (0, 0, 0)
+Scale: (0, 12, 12)
+Children: { lfloor lfloor }
+------------------------------------------------
+Symbol Name: front
+Position: (0, 0, 0)
+Scale: (12, 12, 0)
+Children: { gfloor ffloor }
+------------------------------------------------
+Symbol Name: right_facade
+Position: (12, 0, 0)
+Scale: (0, 12, 12)
+Children: { rfloor rfloor }
+------------------------------------------------
+Symbol Name: back
+Position: (0, 0, 12)
+Scale: (12, 12, 0)
+Children: { wall }
+------------------------------------------------
+Symbol Name: bottom
+Position: (0, 0, 0)
+Scale: (12, 0, 12)
+Children: { }
+------------------------------------------------
+Symbol Name: lfloor
+Position: (0, 0, 0)
+Scale: (0, 6, 12)
+Children: { ltiles }
+------------------------------------------------
+Symbol Name: lfloor
+Position: (0, 6, 0)
+Scale: (0, 6, 12)
+Children: { ltiles }
+------------------------------------------------
+Symbol Name: gfloor
+Position: (0, 0, 0)
+Scale: (12, 6, 0)
+Children: { ftiles entrance }
+------------------------------------------------
+Symbol Name: ffloor
+Position: (0, 6, 0)
+Scale: (12, 6, 0)
+Children: { ftiles }
+------------------------------------------------
+Symbol Name: rfloor
+Position: (12, 0, 0)
+Scale: (0, 6, 12)
+Children: { rtiles }
+------------------------------------------------
+Symbol Name: rfloor
+Position: (12, 6, 0)
+Scale: (0, 6, 12)
+Children: { rtiles }
+------------------------------------------------
+Symbol Name: wall
+Position: (0, 0, 12)
+Scale: (12, 12, 0)
+Children: { }
+------------------------------------------------
+Symbol Name: ltiles
+Position: (0, 0, 0)
+Scale: (0, 6, 12)
+Children: { ltile ltile ltile ltile }
+------------------------------------------------
+Symbol Name: ltiles
+Position: (0, 6, 0)
+Scale: (0, 6, 12)
+Children: { ltile ltile ltile ltile }
+------------------------------------------------
+Symbol Name: ftiles
+Position: (0, 0, 0)
+Scale: (9, 6, 0)
+Children: { ftile ftile ftile }
+------------------------------------------------
+Symbol Name: entrance
+Position: (9, 0, 0)
+Scale: (3, 6, 0)
+Children: { wall door_area wall }
+------------------------------------------------
+Symbol Name: ftiles
+Position: (0, 6, 0)
+Scale: (12, 6, 0)
+Children: { ftile ftile ftile ftile }
+------------------------------------------------
+Symbol Name: rtiles
+Position: (12, 0, 0)
+Scale: (0, 6, 12)
+Children: { rtile rtile rtile rtile }
+------------------------------------------------
+Symbol Name: rtiles
+Position: (12, 6, 0)
+Scale: (0, 6, 12)
+Children: { rtile rtile rtile rtile }
+------------------------------------------------
+Symbol Name: ltile
+Position: (0, 0, 0)
+Scale: (0, 6, 3)
+Children: { lwall lwindow_area lwall }
+------------------------------------------------
+Symbol Name: ltile
+Position: (0, 0, 3)
+Scale: (0, 6, 3)
+Children: { lwall lwindow_area lwall }
+------------------------------------------------
+Symbol Name: ltile
+Position: (0, 0, 6)
+Scale: (0, 6, 3)
+Children: { lwall lwindow_area lwall }
+------------------------------------------------
+Symbol Name: ltile
+Position: (0, 0, 9)
+Scale: (0, 6, 3)
+Children: { lwall lwindow_area lwall }
+------------------------------------------------
+Symbol Name: ltile
+Position: (0, 6, 0)
+Scale: (0, 6, 3)
+Children: { lwall lwindow_area lwall }
+------------------------------------------------
+Symbol Name: ltile
+Position: (0, 6, 3)
+Scale: (0, 6, 3)
+Children: { lwall lwindow_area lwall }
+------------------------------------------------
+Symbol Name: ltile
+Position: (0, 6, 6)
+Scale: (0, 6, 3)
+Children: { lwall lwindow_area lwall }
+------------------------------------------------
+Symbol Name: ltile
+Position: (0, 6, 9)
+Scale: (0, 6, 3)
+Children: { lwall lwindow_area lwall }
+------------------------------------------------
+Symbol Name: ftile
+Position: (0, 0, 0)
+Scale: (3, 6, 0)
+Children: { fwall fwindow_area fwall }
+------------------------------------------------
+Symbol Name: ftile
+Position: (3, 0, 0)
+Scale: (3, 6, 0)
+Children: { fwall fwindow_area fwall }
+------------------------------------------------
+Symbol Name: ftile
+Position: (6, 0, 0)
+Scale: (3, 6, 0)
+Children: { fwall fwindow_area fwall }
+------------------------------------------------
+Symbol Name: wall
+Position: (9, 0, 0)
+Scale: (0.5, 6, 0)
+Children: { }
+------------------------------------------------
+Symbol Name: door_area
+Position: (9.5, 0, 0)
+Scale: (2, 6, 0)
+Children: { door wall }
+------------------------------------------------
+Symbol Name: wall
+Position: (11.5, 0, 0)
+Scale: (0.5, 6, 0)
+Children: { }
+------------------------------------------------
+Symbol Name: ftile
+Position: (0, 6, 0)
+Scale: (3, 6, 0)
+Children: { fwall fwindow_area fwall }
+------------------------------------------------
+Symbol Name: ftile
+Position: (3, 6, 0)
+Scale: (3, 6, 0)
+Children: { fwall fwindow_area fwall }
+------------------------------------------------
+Symbol Name: ftile
+Position: (6, 6, 0)
+Scale: (3, 6, 0)
+Children: { fwall fwindow_area fwall }
+------------------------------------------------
+Symbol Name: ftile
+Position: (9, 6, 0)
+Scale: (3, 6, 0)
+Children: { fwall fwindow_area fwall }
+------------------------------------------------
+Symbol Name: rtile
+Position: (12, 0, 0)
+Scale: (0, 6, 3)
+Children: { rwall rwindow_area rwall }
+------------------------------------------------
+Symbol Name: rtile
+Position: (12, 0, 3)
+Scale: (0, 6, 3)
+Children: { rwall rwindow_area rwall }
+------------------------------------------------
+Symbol Name: rtile
+Position: (12, 0, 6)
+Scale: (0, 6, 3)
+Children: { rwall rwindow_area rwall }
+------------------------------------------------
+Symbol Name: rtile
+Position: (12, 0, 9)
+Scale: (0, 6, 3)
+Children: { rwall rwindow_area rwall }
+------------------------------------------------
+Symbol Name: rtile
+Position: (12, 6, 0)
+Scale: (0, 6, 3)
+Children: { rwall rwindow_area rwall }
+------------------------------------------------
+Symbol Name: rtile
+Position: (12, 6, 3)
+Scale: (0, 6, 3)
+Children: { rwall rwindow_area rwall }
+------------------------------------------------
+Symbol Name: rtile
+Position: (12, 6, 6)
+Scale: (0, 6, 3)
+Children: { rwall rwindow_area rwall }
+------------------------------------------------
+Symbol Name: rtile
+Position: (12, 6, 9)
+Scale: (0, 6, 3)
+Children: { rwall rwindow_area rwall }
+------------------------------------------------
+Symbol Name: lwall
+Position: (0, 0, 0)
+Scale: (0, 6, 0.5)
+Children: { wall }
+------------------------------------------------
+Symbol Name: lwindow_area
+Position: (0, 0, 0.5)
+Scale: (0, 6, 2)
+Children: { lwall lwindow lwall }
+------------------------------------------------
+Symbol Name: lwall
+Position: (0, 0, 2.5)
+Scale: (0, 6, 0.5)
+Children: { wall }
+------------------------------------------------
+Symbol Name: lwall
+Position: (0, 0, 3)
+Scale: (0, 6, 0.5)
+Children: { wall }
+------------------------------------------------
+Symbol Name: lwindow_area
+Position: (0, 0, 3.5)
+Scale: (0, 6, 2)
+Children: { lwall lwindow lwall }
+------------------------------------------------
+Symbol Name: lwall
+Position: (0, 0, 5.5)
+Scale: (0, 6, 0.5)
+Children: { wall }
+------------------------------------------------
+Symbol Name: lwall
+Position: (0, 0, 6)
+Scale: (0, 6, 0.5)
+Children: { wall }
+------------------------------------------------
+Symbol Name: lwindow_area
+Position: (0, 0, 6.5)
+Scale: (0, 6, 2)
+Children: { lwall lwindow lwall }
+------------------------------------------------
+Symbol Name: lwall
+Position: (0, 0, 8.5)
+Scale: (0, 6, 0.5)
+Children: { wall }
+------------------------------------------------
+Symbol Name: lwall
+Position: (0, 0, 9)
+Scale: (0, 6, 0.5)
+Children: { wall }
+------------------------------------------------
+Symbol Name: lwindow_area
+Position: (0, 0, 9.5)
+Scale: (0, 6, 2)
+Children: { lwall lwindow lwall }
+------------------------------------------------
+Symbol Name: lwall
+Position: (0, 0, 11.5)
+Scale: (0, 6, 0.5)
+Children: { wall }
+------------------------------------------------
+Symbol Name: lwall
+Position: (0, 6, 0)
+Scale: (0, 6, 0.5)
+Children: { wall }
+------------------------------------------------
+Symbol Name: lwindow_area
+Position: (0, 6, 0.5)
+Scale: (0, 6, 2)
+Children: { lwall lwindow lwall }
+------------------------------------------------
+Symbol Name: lwall
+Position: (0, 6, 2.5)
+Scale: (0, 6, 0.5)
+Children: { wall }
+------------------------------------------------
+Symbol Name: lwall
+Position: (0, 6, 3)
+Scale: (0, 6, 0.5)
+Children: { wall }
+------------------------------------------------
+Symbol Name: lwindow_area
+Position: (0, 6, 3.5)
+Scale: (0, 6, 2)
+Children: { lwall lwindow lwall }
+------------------------------------------------
+Symbol Name: lwall
+Position: (0, 6, 5.5)
+Scale: (0, 6, 0.5)
+Children: { wall }
+------------------------------------------------
+Symbol Name: lwall
+Position: (0, 6, 6)
+Scale: (0, 6, 0.5)
+Children: { wall }
+------------------------------------------------
+Symbol Name: lwindow_area
+Position: (0, 6, 6.5)
+Scale: (0, 6, 2)
+Children: { lwall lwindow lwall }
+------------------------------------------------
+Symbol Name: lwall
+Position: (0, 6, 8.5)
+Scale: (0, 6, 0.5)
+Children: { wall }
+------------------------------------------------
+Symbol Name: lwall
+Position: (0, 6, 9)
+Scale: (0, 6, 0.5)
+Children: { wall }
+------------------------------------------------
+Symbol Name: lwindow_area
+Position: (0, 6, 9.5)
+Scale: (0, 6, 2)
+Children: { lwall lwindow lwall }
+------------------------------------------------
+Symbol Name: lwall
+Position: (0, 6, 11.5)
+Scale: (0, 6, 0.5)
+Children: { wall }
+------------------------------------------------
+Symbol Name: fwall
+Position: (0, 0, 0)
+Scale: (0.5, 6, 0)
+Children: { wall }
+------------------------------------------------
+Symbol Name: fwindow_area
+Position: (0.5, 0, 0)
+Scale: (2, 6, 0)
+Children: { fwall fwindow fwall }
+------------------------------------------------
+Symbol Name: fwall
+Position: (2.5, 0, 0)
+Scale: (0.5, 6, 0)
+Children: { wall }
+------------------------------------------------
+Symbol Name: fwall
+Position: (3, 0, 0)
+Scale: (0.5, 6, 0)
+Children: { wall }
+------------------------------------------------
+Symbol Name: fwindow_area
+Position: (3.5, 0, 0)
+Scale: (2, 6, 0)
+Children: { fwall fwindow fwall }
+------------------------------------------------
+Symbol Name: fwall
+Position: (5.5, 0, 0)
+Scale: (0.5, 6, 0)
+Children: { wall }
+------------------------------------------------
+Symbol Name: fwall
+Position: (6, 0, 0)
+Scale: (0.5, 6, 0)
+Children: { wall }
+------------------------------------------------
+Symbol Name: fwindow_area
+Position: (6.5, 0, 0)
+Scale: (2, 6, 0)
+Children: { fwall fwindow fwall }
+------------------------------------------------
+Symbol Name: fwall
+Position: (8.5, 0, 0)
+Scale: (0.5, 6, 0)
+Children: { wall }
+------------------------------------------------
+Symbol Name: door
+Position: (9.5, 0, 0)
+Scale: (2, 5, 0)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (9.5, 5, 0)
+Scale: (2, 1, 0)
+Children: { }
+------------------------------------------------
+Symbol Name: fwall
+Position: (0, 6, 0)
+Scale: (0.5, 6, 0)
+Children: { wall }
+------------------------------------------------
+Symbol Name: fwindow_area
+Position: (0.5, 6, 0)
+Scale: (2, 6, 0)
+Children: { fwall fwindow fwall }
+------------------------------------------------
+Symbol Name: fwall
+Position: (2.5, 6, 0)
+Scale: (0.5, 6, 0)
+Children: { wall }
+------------------------------------------------
+Symbol Name: fwall
+Position: (3, 6, 0)
+Scale: (0.5, 6, 0)
+Children: { wall }
+------------------------------------------------
+Symbol Name: fwindow_area
+Position: (3.5, 6, 0)
+Scale: (2, 6, 0)
+Children: { fwall fwindow fwall }
+------------------------------------------------
+Symbol Name: fwall
+Position: (5.5, 6, 0)
+Scale: (0.5, 6, 0)
+Children: { wall }
+------------------------------------------------
+Symbol Name: fwall
+Position: (6, 6, 0)
+Scale: (0.5, 6, 0)
+Children: { wall }
+------------------------------------------------
+Symbol Name: fwindow_area
+Position: (6.5, 6, 0)
+Scale: (2, 6, 0)
+Children: { fwall fwindow fwall }
+------------------------------------------------
+Symbol Name: fwall
+Position: (8.5, 6, 0)
+Scale: (0.5, 6, 0)
+Children: { wall }
+------------------------------------------------
+Symbol Name: fwall
+Position: (9, 6, 0)
+Scale: (0.5, 6, 0)
+Children: { wall }
+------------------------------------------------
+Symbol Name: fwindow_area
+Position: (9.5, 6, 0)
+Scale: (2, 6, 0)
+Children: { fwall fwindow fwall }
+------------------------------------------------
+Symbol Name: fwall
+Position: (11.5, 6, 0)
+Scale: (0.5, 6, 0)
+Children: { wall }
+------------------------------------------------
+Symbol Name: rwall
+Position: (12, 0, 0)
+Scale: (0, 6, 0.5)
+Children: { wall }
+------------------------------------------------
+Symbol Name: rwindow_area
+Position: (12, 0, 0.5)
+Scale: (0, 6, 2)
+Children: { rwall rwindow rwall }
+------------------------------------------------
+Symbol Name: rwall
+Position: (12, 0, 2.5)
+Scale: (0, 6, 0.5)
+Children: { wall }
+------------------------------------------------
+Symbol Name: rwall
+Position: (12, 0, 3)
+Scale: (0, 6, 0.5)
+Children: { wall }
+------------------------------------------------
+Symbol Name: rwindow_area
+Position: (12, 0, 3.5)
+Scale: (0, 6, 2)
+Children: { rwall rwindow rwall }
+------------------------------------------------
+Symbol Name: rwall
+Position: (12, 0, 5.5)
+Scale: (0, 6, 0.5)
+Children: { wall }
+------------------------------------------------
+Symbol Name: rwall
+Position: (12, 0, 6)
+Scale: (0, 6, 0.5)
+Children: { wall }
+------------------------------------------------
+Symbol Name: rwindow_area
+Position: (12, 0, 6.5)
+Scale: (0, 6, 2)
+Children: { rwall rwindow rwall }
+------------------------------------------------
+Symbol Name: rwall
+Position: (12, 0, 8.5)
+Scale: (0, 6, 0.5)
+Children: { wall }
+------------------------------------------------
+Symbol Name: rwall
+Position: (12, 0, 9)
+Scale: (0, 6, 0.5)
+Children: { wall }
+------------------------------------------------
+Symbol Name: rwindow_area
+Position: (12, 0, 9.5)
+Scale: (0, 6, 2)
+Children: { rwall rwindow rwall }
+------------------------------------------------
+Symbol Name: rwall
+Position: (12, 0, 11.5)
+Scale: (0, 6, 0.5)
+Children: { wall }
+------------------------------------------------
+Symbol Name: rwall
+Position: (12, 6, 0)
+Scale: (0, 6, 0.5)
+Children: { wall }
+------------------------------------------------
+Symbol Name: rwindow_area
+Position: (12, 6, 0.5)
+Scale: (0, 6, 2)
+Children: { rwall rwindow rwall }
+------------------------------------------------
+Symbol Name: rwall
+Position: (12, 6, 2.5)
+Scale: (0, 6, 0.5)
+Children: { wall }
+------------------------------------------------
+Symbol Name: rwall
+Position: (12, 6, 3)
+Scale: (0, 6, 0.5)
+Children: { wall }
+------------------------------------------------
+Symbol Name: rwindow_area
+Position: (12, 6, 3.5)
+Scale: (0, 6, 2)
+Children: { rwall rwindow rwall }
+------------------------------------------------
+Symbol Name: rwall
+Position: (12, 6, 5.5)
+Scale: (0, 6, 0.5)
+Children: { wall }
+------------------------------------------------
+Symbol Name: rwall
+Position: (12, 6, 6)
+Scale: (0, 6, 0.5)
+Children: { wall }
+------------------------------------------------
+Symbol Name: rwindow_area
+Position: (12, 6, 6.5)
+Scale: (0, 6, 2)
+Children: { rwall rwindow rwall }
+------------------------------------------------
+Symbol Name: rwall
+Position: (12, 6, 8.5)
+Scale: (0, 6, 0.5)
+Children: { wall }
+------------------------------------------------
+Symbol Name: rwall
+Position: (12, 6, 9)
+Scale: (0, 6, 0.5)
+Children: { wall }
+------------------------------------------------
+Symbol Name: rwindow_area
+Position: (12, 6, 9.5)
+Scale: (0, 6, 2)
+Children: { rwall rwindow rwall }
+------------------------------------------------
+Symbol Name: rwall
+Position: (12, 6, 11.5)
+Scale: (0, 6, 0.5)
+Children: { wall }
+------------------------------------------------
+Symbol Name: wall
+Position: (0, 0, 0)
+Scale: (0, 6, 0.5)
+Children: { }
+------------------------------------------------
+Symbol Name: lwall
+Position: (0, 0, 0.5)
+Scale: (0, 1.2, 2)
+Children: { wall }
+------------------------------------------------
+Symbol Name: lwindow
+Position: (0, 1.2, 0.5)
+Scale: (0, 4, 2)
+Children: { window }
+------------------------------------------------
+Symbol Name: lwall
+Position: (0, 5.2, 0.5)
+Scale: (0, 0.8, 2)
+Children: { wall }
+------------------------------------------------
+Symbol Name: wall
+Position: (0, 0, 2.5)
+Scale: (0, 6, 0.5)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (0, 0, 3)
+Scale: (0, 6, 0.5)
+Children: { }
+------------------------------------------------
+Symbol Name: lwall
+Position: (0, 0, 3.5)
+Scale: (0, 1.2, 2)
+Children: { wall }
+------------------------------------------------
+Symbol Name: lwindow
+Position: (0, 1.2, 3.5)
+Scale: (0, 4, 2)
+Children: { window }
+------------------------------------------------
+Symbol Name: lwall
+Position: (0, 5.2, 3.5)
+Scale: (0, 0.8, 2)
+Children: { wall }
+------------------------------------------------
+Symbol Name: wall
+Position: (0, 0, 5.5)
+Scale: (0, 6, 0.5)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (0, 0, 6)
+Scale: (0, 6, 0.5)
+Children: { }
+------------------------------------------------
+Symbol Name: lwall
+Position: (0, 0, 6.5)
+Scale: (0, 1.2, 2)
+Children: { wall }
+------------------------------------------------
+Symbol Name: lwindow
+Position: (0, 1.2, 6.5)
+Scale: (0, 4, 2)
+Children: { window }
+------------------------------------------------
+Symbol Name: lwall
+Position: (0, 5.2, 6.5)
+Scale: (0, 0.8, 2)
+Children: { wall }
+------------------------------------------------
+Symbol Name: wall
+Position: (0, 0, 8.5)
+Scale: (0, 6, 0.5)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (0, 0, 9)
+Scale: (0, 6, 0.5)
+Children: { }
+------------------------------------------------
+Symbol Name: lwall
+Position: (0, 0, 9.5)
+Scale: (0, 1.2, 2)
+Children: { wall }
+------------------------------------------------
+Symbol Name: lwindow
+Position: (0, 1.2, 9.5)
+Scale: (0, 4, 2)
+Children: { window }
+------------------------------------------------
+Symbol Name: lwall
+Position: (0, 5.2, 9.5)
+Scale: (0, 0.8, 2)
+Children: { wall }
+------------------------------------------------
+Symbol Name: wall
+Position: (0, 0, 11.5)
+Scale: (0, 6, 0.5)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (0, 6, 0)
+Scale: (0, 6, 0.5)
+Children: { }
+------------------------------------------------
+Symbol Name: lwall
+Position: (0, 6, 0.5)
+Scale: (0, 1.2, 2)
+Children: { wall }
+------------------------------------------------
+Symbol Name: lwindow
+Position: (0, 7.2, 0.5)
+Scale: (0, 4, 2)
+Children: { window }
+------------------------------------------------
+Symbol Name: lwall
+Position: (0, 11.2, 0.5)
+Scale: (0, 0.8, 2)
+Children: { wall }
+------------------------------------------------
+Symbol Name: wall
+Position: (0, 6, 2.5)
+Scale: (0, 6, 0.5)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (0, 6, 3)
+Scale: (0, 6, 0.5)
+Children: { }
+------------------------------------------------
+Symbol Name: lwall
+Position: (0, 6, 3.5)
+Scale: (0, 1.2, 2)
+Children: { wall }
+------------------------------------------------
+Symbol Name: lwindow
+Position: (0, 7.2, 3.5)
+Scale: (0, 4, 2)
+Children: { window }
+------------------------------------------------
+Symbol Name: lwall
+Position: (0, 11.2, 3.5)
+Scale: (0, 0.8, 2)
+Children: { wall }
+------------------------------------------------
+Symbol Name: wall
+Position: (0, 6, 5.5)
+Scale: (0, 6, 0.5)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (0, 6, 6)
+Scale: (0, 6, 0.5)
+Children: { }
+------------------------------------------------
+Symbol Name: lwall
+Position: (0, 6, 6.5)
+Scale: (0, 1.2, 2)
+Children: { wall }
+------------------------------------------------
+Symbol Name: lwindow
+Position: (0, 7.2, 6.5)
+Scale: (0, 4, 2)
+Children: { window }
+------------------------------------------------
+Symbol Name: lwall
+Position: (0, 11.2, 6.5)
+Scale: (0, 0.8, 2)
+Children: { wall }
+------------------------------------------------
+Symbol Name: wall
+Position: (0, 6, 8.5)
+Scale: (0, 6, 0.5)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (0, 6, 9)
+Scale: (0, 6, 0.5)
+Children: { }
+------------------------------------------------
+Symbol Name: lwall
+Position: (0, 6, 9.5)
+Scale: (0, 1.2, 2)
+Children: { wall }
+------------------------------------------------
+Symbol Name: lwindow
+Position: (0, 7.2, 9.5)
+Scale: (0, 4, 2)
+Children: { window }
+------------------------------------------------
+Symbol Name: lwall
+Position: (0, 11.2, 9.5)
+Scale: (0, 0.8, 2)
+Children: { wall }
+------------------------------------------------
+Symbol Name: wall
+Position: (0, 6, 11.5)
+Scale: (0, 6, 0.5)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (0, 0, 0)
+Scale: (0.5, 6, 0)
+Children: { }
+------------------------------------------------
+Symbol Name: fwall
+Position: (0.5, 0, 0)
+Scale: (2, 1.2, 0)
+Children: { wall }
+------------------------------------------------
+Symbol Name: fwindow
+Position: (0.5, 1.2, 0)
+Scale: (2, 4, 0)
+Children: { window }
+------------------------------------------------
+Symbol Name: fwall
+Position: (0.5, 5.2, 0)
+Scale: (2, 0.8, 0)
+Children: { wall }
+------------------------------------------------
+Symbol Name: wall
+Position: (2.5, 0, 0)
+Scale: (0.5, 6, 0)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (3, 0, 0)
+Scale: (0.5, 6, 0)
+Children: { }
+------------------------------------------------
+Symbol Name: fwall
+Position: (3.5, 0, 0)
+Scale: (2, 1.2, 0)
+Children: { wall }
+------------------------------------------------
+Symbol Name: fwindow
+Position: (3.5, 1.2, 0)
+Scale: (2, 4, 0)
+Children: { window }
+------------------------------------------------
+Symbol Name: fwall
+Position: (3.5, 5.2, 0)
+Scale: (2, 0.8, 0)
+Children: { wall }
+------------------------------------------------
+Symbol Name: wall
+Position: (5.5, 0, 0)
+Scale: (0.5, 6, 0)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (6, 0, 0)
+Scale: (0.5, 6, 0)
+Children: { }
+------------------------------------------------
+Symbol Name: fwall
+Position: (6.5, 0, 0)
+Scale: (2, 1.2, 0)
+Children: { wall }
+------------------------------------------------
+Symbol Name: fwindow
+Position: (6.5, 1.2, 0)
+Scale: (2, 4, 0)
+Children: { window }
+------------------------------------------------
+Symbol Name: fwall
+Position: (6.5, 5.2, 0)
+Scale: (2, 0.8, 0)
+Children: { wall }
+------------------------------------------------
+Symbol Name: wall
+Position: (8.5, 0, 0)
+Scale: (0.5, 6, 0)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (0, 6, 0)
+Scale: (0.5, 6, 0)
+Children: { }
+------------------------------------------------
+Symbol Name: fwall
+Position: (0.5, 6, 0)
+Scale: (2, 1.2, 0)
+Children: { wall }
+------------------------------------------------
+Symbol Name: fwindow
+Position: (0.5, 7.2, 0)
+Scale: (2, 4, 0)
+Children: { window }
+------------------------------------------------
+Symbol Name: fwall
+Position: (0.5, 11.2, 0)
+Scale: (2, 0.8, 0)
+Children: { wall }
+------------------------------------------------
+Symbol Name: wall
+Position: (2.5, 6, 0)
+Scale: (0.5, 6, 0)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (3, 6, 0)
+Scale: (0.5, 6, 0)
+Children: { }
+------------------------------------------------
+Symbol Name: fwall
+Position: (3.5, 6, 0)
+Scale: (2, 1.2, 0)
+Children: { wall }
+------------------------------------------------
+Symbol Name: fwindow
+Position: (3.5, 7.2, 0)
+Scale: (2, 4, 0)
+Children: { window }
+------------------------------------------------
+Symbol Name: fwall
+Position: (3.5, 11.2, 0)
+Scale: (2, 0.8, 0)
+Children: { wall }
+------------------------------------------------
+Symbol Name: wall
+Position: (5.5, 6, 0)
+Scale: (0.5, 6, 0)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (6, 6, 0)
+Scale: (0.5, 6, 0)
+Children: { }
+------------------------------------------------
+Symbol Name: fwall
+Position: (6.5, 6, 0)
+Scale: (2, 1.2, 0)
+Children: { wall }
+------------------------------------------------
+Symbol Name: fwindow
+Position: (6.5, 7.2, 0)
+Scale: (2, 4, 0)
+Children: { window }
+------------------------------------------------
+Symbol Name: fwall
+Position: (6.5, 11.2, 0)
+Scale: (2, 0.8, 0)
+Children: { wall }
+------------------------------------------------
+Symbol Name: wall
+Position: (8.5, 6, 0)
+Scale: (0.5, 6, 0)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (9, 6, 0)
+Scale: (0.5, 6, 0)
+Children: { }
+------------------------------------------------
+Symbol Name: fwall
+Position: (9.5, 6, 0)
+Scale: (2, 1.2, 0)
+Children: { wall }
+------------------------------------------------
+Symbol Name: fwindow
+Position: (9.5, 7.2, 0)
+Scale: (2, 4, 0)
+Children: { window }
+------------------------------------------------
+Symbol Name: fwall
+Position: (9.5, 11.2, 0)
+Scale: (2, 0.8, 0)
+Children: { wall }
+------------------------------------------------
+Symbol Name: wall
+Position: (11.5, 6, 0)
+Scale: (0.5, 6, 0)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (12, 0, 0)
+Scale: (0, 6, 0.5)
+Children: { }
+------------------------------------------------
+Symbol Name: rwall
+Position: (12, 0, 0.5)
+Scale: (0, 1.2, 2)
+Children: { wall }
+------------------------------------------------
+Symbol Name: rwindow
+Position: (12, 1.2, 0.5)
+Scale: (0, 4, 2)
+Children: { window }
+------------------------------------------------
+Symbol Name: rwall
+Position: (12, 5.2, 0.5)
+Scale: (0, 0.8, 2)
+Children: { wall }
+------------------------------------------------
+Symbol Name: wall
+Position: (12, 0, 2.5)
+Scale: (0, 6, 0.5)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (12, 0, 3)
+Scale: (0, 6, 0.5)
+Children: { }
+------------------------------------------------
+Symbol Name: rwall
+Position: (12, 0, 3.5)
+Scale: (0, 1.2, 2)
+Children: { wall }
+------------------------------------------------
+Symbol Name: rwindow
+Position: (12, 1.2, 3.5)
+Scale: (0, 4, 2)
+Children: { window }
+------------------------------------------------
+Symbol Name: rwall
+Position: (12, 5.2, 3.5)
+Scale: (0, 0.8, 2)
+Children: { wall }
+------------------------------------------------
+Symbol Name: wall
+Position: (12, 0, 5.5)
+Scale: (0, 6, 0.5)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (12, 0, 6)
+Scale: (0, 6, 0.5)
+Children: { }
+------------------------------------------------
+Symbol Name: rwall
+Position: (12, 0, 6.5)
+Scale: (0, 1.2, 2)
+Children: { wall }
+------------------------------------------------
+Symbol Name: rwindow
+Position: (12, 1.2, 6.5)
+Scale: (0, 4, 2)
+Children: { window }
+------------------------------------------------
+Symbol Name: rwall
+Position: (12, 5.2, 6.5)
+Scale: (0, 0.8, 2)
+Children: { wall }
+------------------------------------------------
+Symbol Name: wall
+Position: (12, 0, 8.5)
+Scale: (0, 6, 0.5)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (12, 0, 9)
+Scale: (0, 6, 0.5)
+Children: { }
+------------------------------------------------
+Symbol Name: rwall
+Position: (12, 0, 9.5)
+Scale: (0, 1.2, 2)
+Children: { wall }
+------------------------------------------------
+Symbol Name: rwindow
+Position: (12, 1.2, 9.5)
+Scale: (0, 4, 2)
+Children: { window }
+------------------------------------------------
+Symbol Name: rwall
+Position: (12, 5.2, 9.5)
+Scale: (0, 0.8, 2)
+Children: { wall }
+------------------------------------------------
+Symbol Name: wall
+Position: (12, 0, 11.5)
+Scale: (0, 6, 0.5)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (12, 6, 0)
+Scale: (0, 6, 0.5)
+Children: { }
+------------------------------------------------
+Symbol Name: rwall
+Position: (12, 6, 0.5)
+Scale: (0, 1.2, 2)
+Children: { wall }
+------------------------------------------------
+Symbol Name: rwindow
+Position: (12, 7.2, 0.5)
+Scale: (0, 4, 2)
+Children: { window }
+------------------------------------------------
+Symbol Name: rwall
+Position: (12, 11.2, 0.5)
+Scale: (0, 0.8, 2)
+Children: { wall }
+------------------------------------------------
+Symbol Name: wall
+Position: (12, 6, 2.5)
+Scale: (0, 6, 0.5)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (12, 6, 3)
+Scale: (0, 6, 0.5)
+Children: { }
+------------------------------------------------
+Symbol Name: rwall
+Position: (12, 6, 3.5)
+Scale: (0, 1.2, 2)
+Children: { wall }
+------------------------------------------------
+Symbol Name: rwindow
+Position: (12, 7.2, 3.5)
+Scale: (0, 4, 2)
+Children: { window }
+------------------------------------------------
+Symbol Name: rwall
+Position: (12, 11.2, 3.5)
+Scale: (0, 0.8, 2)
+Children: { wall }
+------------------------------------------------
+Symbol Name: wall
+Position: (12, 6, 5.5)
+Scale: (0, 6, 0.5)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (12, 6, 6)
+Scale: (0, 6, 0.5)
+Children: { }
+------------------------------------------------
+Symbol Name: rwall
+Position: (12, 6, 6.5)
+Scale: (0, 1.2, 2)
+Children: { wall }
+------------------------------------------------
+Symbol Name: rwindow
+Position: (12, 7.2, 6.5)
+Scale: (0, 4, 2)
+Children: { window }
+------------------------------------------------
+Symbol Name: rwall
+Position: (12, 11.2, 6.5)
+Scale: (0, 0.8, 2)
+Children: { wall }
+------------------------------------------------
+Symbol Name: wall
+Position: (12, 6, 8.5)
+Scale: (0, 6, 0.5)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (12, 6, 9)
+Scale: (0, 6, 0.5)
+Children: { }
+------------------------------------------------
+Symbol Name: rwall
+Position: (12, 6, 9.5)
+Scale: (0, 1.2, 2)
+Children: { wall }
+------------------------------------------------
+Symbol Name: rwindow
+Position: (12, 7.2, 9.5)
+Scale: (0, 4, 2)
+Children: { window }
+------------------------------------------------
+Symbol Name: rwall
+Position: (12, 11.2, 9.5)
+Scale: (0, 0.8, 2)
+Children: { wall }
+------------------------------------------------
+Symbol Name: wall
+Position: (12, 6, 11.5)
+Scale: (0, 6, 0.5)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (0, 0, 0.5)
+Scale: (0, 1.2, 2)
+Children: { }
+------------------------------------------------
+Symbol Name: window
+Position: (0, 1.2, 0.5)
+Scale: (0, 4, 2)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (0, 5.2, 0.5)
+Scale: (0, 0.8, 2)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (0, 0, 3.5)
+Scale: (0, 1.2, 2)
+Children: { }
+------------------------------------------------
+Symbol Name: window
+Position: (0, 1.2, 3.5)
+Scale: (0, 4, 2)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (0, 5.2, 3.5)
+Scale: (0, 0.8, 2)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (0, 0, 6.5)
+Scale: (0, 1.2, 2)
+Children: { }
+------------------------------------------------
+Symbol Name: window
+Position: (0, 1.2, 6.5)
+Scale: (0, 4, 2)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (0, 5.2, 6.5)
+Scale: (0, 0.8, 2)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (0, 0, 9.5)
+Scale: (0, 1.2, 2)
+Children: { }
+------------------------------------------------
+Symbol Name: window
+Position: (0, 1.2, 9.5)
+Scale: (0, 4, 2)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (0, 5.2, 9.5)
+Scale: (0, 0.8, 2)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (0, 6, 0.5)
+Scale: (0, 1.2, 2)
+Children: { }
+------------------------------------------------
+Symbol Name: window
+Position: (0, 7.2, 0.5)
+Scale: (0, 4, 2)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (0, 11.2, 0.5)
+Scale: (0, 0.8, 2)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (0, 6, 3.5)
+Scale: (0, 1.2, 2)
+Children: { }
+------------------------------------------------
+Symbol Name: window
+Position: (0, 7.2, 3.5)
+Scale: (0, 4, 2)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (0, 11.2, 3.5)
+Scale: (0, 0.8, 2)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (0, 6, 6.5)
+Scale: (0, 1.2, 2)
+Children: { }
+------------------------------------------------
+Symbol Name: window
+Position: (0, 7.2, 6.5)
+Scale: (0, 4, 2)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (0, 11.2, 6.5)
+Scale: (0, 0.8, 2)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (0, 6, 9.5)
+Scale: (0, 1.2, 2)
+Children: { }
+------------------------------------------------
+Symbol Name: window
+Position: (0, 7.2, 9.5)
+Scale: (0, 4, 2)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (0, 11.2, 9.5)
+Scale: (0, 0.8, 2)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (0.5, 0, 0)
+Scale: (2, 1.2, 0)
+Children: { }
+------------------------------------------------
+Symbol Name: window
+Position: (0.5, 1.2, 0)
+Scale: (2, 4, 0)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (0.5, 5.2, 0)
+Scale: (2, 0.8, 0)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (3.5, 0, 0)
+Scale: (2, 1.2, 0)
+Children: { }
+------------------------------------------------
+Symbol Name: window
+Position: (3.5, 1.2, 0)
+Scale: (2, 4, 0)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (3.5, 5.2, 0)
+Scale: (2, 0.8, 0)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (6.5, 0, 0)
+Scale: (2, 1.2, 0)
+Children: { }
+------------------------------------------------
+Symbol Name: window
+Position: (6.5, 1.2, 0)
+Scale: (2, 4, 0)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (6.5, 5.2, 0)
+Scale: (2, 0.8, 0)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (0.5, 6, 0)
+Scale: (2, 1.2, 0)
+Children: { }
+------------------------------------------------
+Symbol Name: window
+Position: (0.5, 7.2, 0)
+Scale: (2, 4, 0)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (0.5, 11.2, 0)
+Scale: (2, 0.8, 0)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (3.5, 6, 0)
+Scale: (2, 1.2, 0)
+Children: { }
+------------------------------------------------
+Symbol Name: window
+Position: (3.5, 7.2, 0)
+Scale: (2, 4, 0)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (3.5, 11.2, 0)
+Scale: (2, 0.8, 0)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (6.5, 6, 0)
+Scale: (2, 1.2, 0)
+Children: { }
+------------------------------------------------
+Symbol Name: window
+Position: (6.5, 7.2, 0)
+Scale: (2, 4, 0)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (6.5, 11.2, 0)
+Scale: (2, 0.8, 0)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (9.5, 6, 0)
+Scale: (2, 1.2, 0)
+Children: { }
+------------------------------------------------
+Symbol Name: window
+Position: (9.5, 7.2, 0)
+Scale: (2, 4, 0)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (9.5, 11.2, 0)
+Scale: (2, 0.8, 0)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (12, 0, 0.5)
+Scale: (0, 1.2, 2)
+Children: { }
+------------------------------------------------
+Symbol Name: window
+Position: (12, 1.2, 0.5)
+Scale: (0, 4, 2)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (12, 5.2, 0.5)
+Scale: (0, 0.8, 2)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (12, 0, 3.5)
+Scale: (0, 1.2, 2)
+Children: { }
+------------------------------------------------
+Symbol Name: window
+Position: (12, 1.2, 3.5)
+Scale: (0, 4, 2)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (12, 5.2, 3.5)
+Scale: (0, 0.8, 2)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (12, 0, 6.5)
+Scale: (0, 1.2, 2)
+Children: { }
+------------------------------------------------
+Symbol Name: window
+Position: (12, 1.2, 6.5)
+Scale: (0, 4, 2)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (12, 5.2, 6.5)
+Scale: (0, 0.8, 2)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (12, 0, 9.5)
+Scale: (0, 1.2, 2)
+Children: { }
+------------------------------------------------
+Symbol Name: window
+Position: (12, 1.2, 9.5)
+Scale: (0, 4, 2)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (12, 5.2, 9.5)
+Scale: (0, 0.8, 2)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (12, 6, 0.5)
+Scale: (0, 1.2, 2)
+Children: { }
+------------------------------------------------
+Symbol Name: window
+Position: (12, 7.2, 0.5)
+Scale: (0, 4, 2)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (12, 11.2, 0.5)
+Scale: (0, 0.8, 2)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (12, 6, 3.5)
+Scale: (0, 1.2, 2)
+Children: { }
+------------------------------------------------
+Symbol Name: window
+Position: (12, 7.2, 3.5)
+Scale: (0, 4, 2)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (12, 11.2, 3.5)
+Scale: (0, 0.8, 2)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (12, 6, 6.5)
+Scale: (0, 1.2, 2)
+Children: { }
+------------------------------------------------
+Symbol Name: window
+Position: (12, 7.2, 6.5)
+Scale: (0, 4, 2)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (12, 11.2, 6.5)
+Scale: (0, 0.8, 2)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (12, 6, 9.5)
+Scale: (0, 1.2, 2)
+Children: { }
+------------------------------------------------
+Symbol Name: window
+Position: (12, 7.2, 9.5)
+Scale: (0, 4, 2)
+Children: { }
+------------------------------------------------
+Symbol Name: wall
+Position: (12, 11.2, 9.5)
+Scale: (0, 0.8, 2)
+Children: { }
+------------------------------------------------

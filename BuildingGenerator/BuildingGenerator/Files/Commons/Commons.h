@@ -24,8 +24,8 @@ namespace comn
 	private:
 		// --- Variables ----------------------		
 		std::string SymbolName;
-		std::string Texture = ""; 
-		float Opacity = 1.0f;
+		std::string Texture;
+		float Opacity;
 		Vector3 scale;
 		Vector3 position;
 		bool IsActive;
@@ -43,7 +43,7 @@ namespace comn
 		void setOpacity(float opacity) { Opacity = opacity; }
 		float getOpacity() { return Opacity; }
 		void setSymbolName(string name){
-			SymbolName = name;
+			SymbolName = name; setTexture(name);
 		}	
 		string getSymbolName(){
 			return SymbolName;
@@ -78,7 +78,14 @@ namespace comn
 			return IsDrawable;
 		}
 		Symbol() {};
-		Symbol(std::string symbolName){ IsActive = true; IsDrawable = true; SymbolName = symbolName;}
+		Symbol(std::string symbolName){ 
+			IsActive = true; IsDrawable = true; SymbolName = symbolName;
+			if (symbolName == "window" || symbolName == "door" || symbolName == "wall")
+				setTexture(symbolName);
+			else
+				Texture = "no_texture"; // it's important to have this default string.
+			Opacity = 1.0f;
+		}
 		~Symbol(){}
 	};
 

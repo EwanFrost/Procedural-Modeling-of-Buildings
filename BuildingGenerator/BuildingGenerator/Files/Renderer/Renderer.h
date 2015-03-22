@@ -14,6 +14,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <map>
 
 namespace rend
 {
@@ -30,6 +31,7 @@ namespace rend
 		std::pair<int, int> Resolution;
 		bool IsLastStageRendered, IsInitializing;
 		vector<comn::Symbol*> RenderingSymbols;
+		map<std::string, int> Textures;
 
 		// ------------------ MATRIX & NAVIGATION VARS -----------
 		glm::mat4 ProjectionMatrix, ViewMatrix, ModelMatrix, MVP;
@@ -41,6 +43,9 @@ namespace rend
 		float mouseSpeed;
 
 		// --- Methods --------------------------------------------
+		void ParseTreeForTextures(comn::Symbol* tree);
+		void SetTextures(std::map<int, GLuint>& TextureBMP, std::map<int, GLuint>& TextureID);
+		void ActivateTextures(int index);
 		GLuint LoadShaders(const char * vertex_file_path, const char * fragment_file_path);
 		GLuint loadBMP_custom(const char * imagepath){
 
@@ -210,8 +215,8 @@ namespace rend
 
 			return textureID;
 		}
-		void static PosAndScaleToVerteces(comn::Symbol* obj, std::vector<GLfloat>& verteces);
-		void static PosAndScaleToVerteces(comn::Vector3 pos, comn::Vector3 scale, std::vector<GLfloat>& verteces, bool x, bool y, bool z);
+		void PosAndScaleToVerteces(comn::Symbol* obj, std::vector<GLfloat>& verteces, std::vector<GLuint>& texturesID);
+		void PosAndScaleToVerteces(comn::Vector3 pos, comn::Vector3 scale, std::vector<GLfloat>& verteces, bool x, bool y, bool z, float index);
 		void ComputeMatricesFromInputs();			
 
 	public:
