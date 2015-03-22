@@ -38,7 +38,10 @@ namespace comn
 		std::vector<Symbol*> Children;
 			
 		// --- Methods ------------------------		
-	
+		void setTexture(string texture) { Texture = texture; }
+		string getTexture() { return Texture; }
+		void setOpacity(float opacity) { Opacity = opacity; }
+		float getOpacity() { return Opacity; }
 		void setSymbolName(string name){
 			SymbolName = name;
 		}	
