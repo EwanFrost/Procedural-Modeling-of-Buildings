@@ -12,10 +12,11 @@ namespace comn
 	{
 	public:
 		Vector3(){ Vector3(0, 0, 0); }
-		Vector3(double _x, double _y, double _z){ x = _x; y = _y; z = _z; };
-		double x;
-		double y;
-		double z;
+		Vector3(Vector3& other) { x = other.x; y = other.y; z = other.z; }
+		Vector3(float _x, float _y, float _z){ x = _x; y = _y; z = _z;};
+		float x;
+		float y;
+		float z;
 	};
 
 	class Symbol
@@ -23,6 +24,7 @@ namespace comn
 	private:
 		// --- Variables ----------------------		
 		std::string SymbolName;
+		std::string Texture = "";
 		Vector3 scale;
 		Vector3 position;
 		bool IsActive;
@@ -42,43 +44,35 @@ namespace comn
 		string getSymbolName(){
 			return SymbolName;
 		}
-	void setScale(double sx, double sy, double sz){
-		scale.x = sx;
-		scale.y = sy;
-		scale.z = sz;
-	}
-
-	Vector3 getScale(){
-		return scale;
-	}	
-
-	void setPosition(double sx, double sy, double sz){
-		position.x = sx;
-		position.y = sy;
-		position.z = sz;
+		void setScale(double sx, double sy, double sz){
+			scale.x = sx;
+			scale.y = sy;
+			scale.z = sz;
+		}
+		Vector3 getScale(){
+			return scale;
+		}	
+		void setPosition(double sx, double sy, double sz){
+			position.x = sx;
+			position.y = sy;
+			position.z = sz;
 	
-	}
-	
-	Vector3 getPosition(){
-		return position;
-	}
-
-	void setActiveness(bool state){
-		IsActive = state;
-	}
-
-	bool getActiveness(){
-		return IsActive;
-	}
-
-	void setDrawableness(bool state){
-		IsDrawable = state;
-	}
-
-	bool getDrawableness(){
-		return IsDrawable;
-	}
-
+		}	
+		Vector3 getPosition(){
+			return position;
+		}
+		void setActiveness(bool state){
+			IsActive = state;
+		}
+		bool getActiveness(){
+			return IsActive;
+		}
+		void setDrawableness(bool state){
+			IsDrawable = state;
+		}
+		bool getDrawableness(){
+			return IsDrawable;
+		}
 		Symbol() {};
 		Symbol(std::string symbolName){ IsActive = true; IsDrawable = true; SymbolName = symbolName;}
 		~Symbol(){}
