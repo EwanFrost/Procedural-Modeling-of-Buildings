@@ -32,9 +32,6 @@
     <None Include="Files\Renderer\FragmentShader.fragmentshader" />
     <None Include="Files\Renderer\VertexShader.vertexshader" />
   </ItemGroup>
-  <ItemGroup>
-    <Image Include="Files\Resources\wall.bmp" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{D9BAF0E4-35CC-44FF-9BC6-F9614E96B643}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
