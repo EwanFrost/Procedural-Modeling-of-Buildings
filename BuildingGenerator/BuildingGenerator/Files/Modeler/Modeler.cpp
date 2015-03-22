@@ -291,42 +291,47 @@ namespace modl
 
 
 	void Modeler::repeat(vector<string> parameterValues, vector<string> childSymbolNames, Symbol* Parent){
-	 //regard to which coordinate
+		//regard to which coordinate
 		string axis = parameterValues[0];
 		int width = nextInt(parameterValues[1]);
 		int repetation;
-		
-		
+
+
 		Vector3 parentPos = Parent->getPosition();
 		Vector3 parentScale = Parent->getScale();
-		
-		
-		if(axis.compare("\"X\"")==0){		
-			repetation = Parent->getScale().x/width;			
-			for(int i = 0;i<repetation;i++){		 
-			 Symbol* item = new Symbol(childSymbolNames[0]);						 
-			 item->setPosition(i*width, parentPos.y, parentPos.z);
-			 item->setScale(width, parentScale.y, parentScale.z);
-			 
-			    Parent->Children.push_back(item);	
+
+
+		if (axis.compare("\"X\"") == 0){
+			double child_X = parentPos.x;
+			repetation = Parent->getScale().x / width;
+			for (int i = 0; i<repetation; i++){
+				Symbol* item = new Symbol(childSymbolNames[0]);
+				item->setPosition(child_X, parentPos.y, parentPos.z);
+				item->setScale(width, parentScale.y, parentScale.z);
+				child_X += width;
+
+				Parent->Children.push_back(item);
 				queue.push_back(item);
 				//print(item);
 			}
-		}else{			
-			repetation = Parent->getScale().z/width;			
-			for(int i = 0;i<repetation;i++){			
-			 Symbol* item = new Symbol(childSymbolNames[0]);			
-			 item->setPosition(parentPos.x, parentPos.y, i*width);
-			 item->setScale(parentScale.x, parentScale.y,width);			 
-			 Parent->Children.push_back(item);	
-			 queue.push_back(item);
-		     
+		}
+		else{
+			double child_Z = parentPos.z;
+			repetation = Parent->getScale().z / width;
+			for (int i = 0; i<repetation; i++){
+				Symbol* item = new Symbol(childSymbolNames[0]);
+				item->setPosition(parentPos.x, parentPos.y, child_Z);
+				item->setScale(parentScale.x, parentScale.y, width);
+				child_Z += width;
+				Parent->Children.push_back(item);
+				queue.push_back(item);
+
 			}
 		}
-     //how many times
-	 //childName
-	 //scales and coordinates for children
-	 //do map operations
+		//how many times
+		//childName
+		//scales and coordinates for children
+		//do map operations
 	}
 
 	void Modeler::S(vector<string> parameterValues, vector<string> childSymbolNames, Symbol* Parent){
