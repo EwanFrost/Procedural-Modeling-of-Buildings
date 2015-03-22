@@ -10,6 +10,5 @@ int main(int argc, char** argv)
 
 	parser.Parse();
 	modeler.Model(parser.GetRuleSet());
-	if (renderer.IsInitialized())
-		renderer.Render(modeler.GetDeviationTree());
+	renderer.Render(modeler.GetDeviationTree());
 }

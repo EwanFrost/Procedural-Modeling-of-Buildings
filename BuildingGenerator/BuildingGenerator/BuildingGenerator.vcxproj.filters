@@ -56,4 +56,17 @@
       <Filter>Resource Files</Filter>
     </Text>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Files\Renderer\FragmentShader.fragmentshader">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Files\Renderer\VertexShader.vertexshader">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Files\Resources\wall.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
 </Project>
