@@ -321,7 +321,7 @@ namespace rend
 		if (!glfwInit())
 		{
 			fprintf(stderr, "Failed to initialize GLFW\n");
-			return -1;
+			return false;
 		}
 
 		glfwWindowHint(GLFW_SAMPLES, 4);
@@ -334,7 +334,7 @@ namespace rend
 		if (window == NULL){
 			fprintf(stderr, "Failed to open GLFW window. If you have an Intel GPU, they are not 3.3 compatible.\n");
 			glfwTerminate();
-			return -1;
+			return false;
 		}
 		glfwMakeContextCurrent(window);
 
@@ -342,7 +342,7 @@ namespace rend
 		glewExperimental = true; // Needed for core profile
 		if (glewInit() != GLEW_OK) {
 			fprintf(stderr, "Failed to initialize GLEW\n");
-			return -1;
+			return false;
 		}
 
 		fprintf(stderr, "--- USAGE ---\n\n");
@@ -401,7 +401,7 @@ namespace rend
 					std::string FilePath = "../BuildingGenerator/Files/Resources/TextureMix" + TextureMix + "/" + iter->first + ".bmp";
 					TextureBMP[iter->second] = loadBMP_custom(FilePath.c_str());
 
-					std::string TextureSmapler = "TextureSampler" + std::to_string(iter->second);
+					std::string TextureSmapler = "TextureSampler" + std::to_string(static_cast<long long>(iter->second));// std::to_string(iter->second);
 					TextureID[iter->second] = glGetUniformLocation(programID, TextureSmapler.c_str());
 
 					//GLuint Texture = loadBMP_custom("../BuildingGenerator/Files/Resources/no_texture.bmp");
