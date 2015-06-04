@@ -9,4 +9,4 @@ It was consist of three parts(parsing, modeling, visualization) and the main res
   3. Creating derivation tree in modeling and sending output to visualization 
   4. Visualizing the 3D shapes
   I was in Modeling part and it was the hardest. 
-  Technologies that were used: Visual Studio, C++, Open GL. 1. Preparing grammar rules for buildings  ​                                   2. Parsing those rules and sending output to Modeling part ​                                   3. Creating derivation tree in modeling and sending output to visualization  ​                                   4. Visualizing the 3D shapes ​I was in Modeling part and it was the hardest.  ​Technologies that I used: Visual Studio, C++, Open GL. 
+  Technologies that were used: Visual Studio, C++, Open GL. 
